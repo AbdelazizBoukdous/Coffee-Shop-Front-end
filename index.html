@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qahwaa </title>
+    <link rel="icon" type="image/png" href="imgs/logoo.png" class="bb">
+    <link rel="stylesheet" href="style.css">
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar">
+            <a href="#home"><img src="imgs/logo02.png" alt="Caffeine" class="logo"></a>
+            
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-mug-hot"></i> About</a></li>
+                <li><a href="#menu"><i class="fas fa-utensils"></i> Menu</a></li>
+                <li><a href="#testimonials"><i class="fas fa-comment-dots"></i> Testimonials</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="#menu" class="order-btn">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <div class="home-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Premium Coffee Experience</h1>
+                    <p class="hero-subtitle">Where every sip tells a story of passion, quality, and craftsmanship</p>
+                    <div class="hero-buttons">
+                        <a href="#menu" class="btn-primary">Explore Menu</a>
+                        <a href="#about" class="btn-secondary">Our Story</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="imgs/hom02.webp" alt="Premium Coffee" class="landing-image">
+                </div>
+            </div>
+            
+            <!-- Stats Section -->
+            <div class="stats-section">
+                <div class="stat-item">
+                    <i class="fas fa-coffee"></i>
+                    <h3>1000+</h3>
+                    <p>Cups Served Daily</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <h3>500+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-award"></i>
+                    <h3>15+</h3>
+                    <p>Awards Won</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7</h3>
+                    <p>Fresh Coffee</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Our Coffee</h2>
+                    <p>Discover the passion behind every cup</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Our Story</h3>
+                        <p>Since 2006, we've been crafting exceptional coffee experiences. Our journey began with a simple mission: to serve the finest coffee while creating a warm, welcoming space for our community.</p>
+                        
+                        <div class="features">
+                            <div class="feature">
+                                <i class="fas fa-leaf"></i>
+                                <div>
+                                    <h4>Organic Beans</h4>
+                                    <p>Sourced directly from sustainable farms</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-fire"></i>
+                                <div>
+                                    <h4>Fresh Roasted</h4>
+                                    <p>Roasted daily in small batches</p>
+                                </div>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-heart"></i>
+                                <div>
+                                    <h4>Made with Love</h4>
+                                    <p>Every cup crafted with passion</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image">
+                        <img src="imgs/about1.png" alt="Coffee beans">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Menu Section -->
+        <section id="menu">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Menu</h2>
+                    <p>Discover our signature blends and favorites</p>
+                </div>
+                
+                <div class="menu-categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn " data-category="Drinks">Drinks</button>
+                    <button class="category-btn " data-category="tea">Tea</button>
+                    <button class="category-btn" data-category="pastries">Pastries</button>
+                </div>
+                
+                <div class="menu-grid">
+                    <div class="menu-item" data-category="Drinks">
+                        <img src="imgs/2.png" alt="Espresso" >
+                        <div class="menu-item-content">
+                            <h4>Classic Espresso</h4>
+                            <span class="quality">★ Premium Quality</span>
+                            <p>Rich,and perfectly extracted <br> Delicious. <br>$$$</p>
+                            
+                            <span class="price">$3.50</span>
+                            <div >
+                                <a href="#menu" class="order-btn-menu">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item" data-category="Drinks">
+                        <img src="imgs/1.jpg" alt="Cappuccino" >
+                        <div class="menu-item-content">
+                            <h4>Cappuccino</h4>
+                            <span class="quality">★ Premium Quality</span>
+                            <p>Espresso with steamed milk,and foam  <br>bold.</p>
+                            <span class="price">$4.25</span>
+                            <div>
+                                <a href="#menu" class="order-btn-menu">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item" data-category="Drinks">
+                        <img src="imgs/3.png" alt="Latte">
+                        <div class="menu-item-content">
+                            <h4>Caffe Latte</h4>
+                            <span class="quality">★ Premium Quality</span>
+                            <p>Smooth espresso harmoniously blended withsteamed milk </p>
+                            
+                            <span class="price">$4.75</span>
+                            <div >
+                                <a href="#menu" class="order-btn-menu">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                        
+                            
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="Drinks">
+                        <img src="imgs/ze3ze3.jpeg" alt="Drinks">
+                        <div class="menu-item-content">
+                            <h4>Ze3ze3</h4>
+                            <span class="quality">★ Premium Quality</span>
+                            <p>A traditional Moroccan blend of milk, almonds, and dates</p>
+                            
+                            <span class="price">$3.00</span>
+                            <div>
+                                <a href="#menu" class="order-btn-menu">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="Drinks">
+                        <img src="imgs/8.png" alt="Drinks">
+                        <div class="menu-item-content">
+                            <h4>Oreo  Crush</h4>
+                            <span class="quality">★ Premium Quality</span>
+                            <p>Oreo crumbles, rich caramel,and fluffy whipped cream </p>
+                            
+                            <span class="price">$3.00</span>
+                            <div>
+                                <a href="#menu" class="order-btn-menu">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item" data-category="tea">
+                        <img src="imgs/atay.png" alt="Moroccan tea" >
+                        <div class="menu-item-content">
+                            <h4>Moroccan tea</h4>
+                            <span class="quality">★ Premium Quality</span>
+                            <p>Traditional mint tea, fresh and fragrant <br>Delicious</p>
+                            
+                            <span class="price">$2.75</span>
+                            <div >
+                                <a href="#menu" class="order-btn-menu">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="tea">
+                        <img src="imgs/atay2.png" alt="Turkish tea" >
+                        <div class="menu-item-content">
+                            <h4>Turkish tea</h4>
+                            <span class="quality">★ Premium Quality</span>
+                            <p>Best enjoyed rich, bold,and beautifully brewed in Turkish tradition, steeped in full of flavor.</p>
+                            
+                            <span class="price">$1.75</span>
+                            <div>
+                                <a href="#menu" class="order-btn-menu">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="menu-item" data-category="pastries">
+                        <img src="imgs/5.jpeg" alt="Croissant">
+                        <div class="menu-item-content">
+                            <h4>Fresh Croissant</h4>
+                            <span class="quality">★ Premium Quality</span>
+                            <p>Golden, flaky layers with a delicate crunch buttery, golden, fresh, <br>delicious.</p>
+                            
+                            <span class="price">$3.25</span>
+                            <div>
+                                <a href="#menu" class="order-btn-menu">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="menu-item" data-category="pastries">
+                        <img src="imgs/7.png" alt="Moroccan sweets">
+                        <div class="menu-item-content">
+                            <h4>Moroccan Sweets</h4>
+                            <span class="quality">★ Premium Quality</span>
+                            <p>Traditional treats like Chebakia, Kaab el Ghzal, and Briouats and more</p>
+                            
+                            <span class="price">$10.50</span>
+                            <div>
+                                <a href="#menu" class="order-btn-menu">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="pastries">
+                        <img src="imgs/6.png" alt="Muffin">
+                        <div class="menu-item-content">
+                            <h4>Blueberry Muffin</h4>
+                            <span class="quality">★ Premium Quality</span>
+                            <p>Homemade with fresh blueberries, Moist, fruity, sweet, fresh,<br> irresistible <br>Delicious </p>
+                            
+                            <span class="price">$2.95</span>
+                            <div >
+                                <a href="#menu" class="order-btn-menu">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-item" data-category="pastries">
+                        <img src="imgs/tiramisu1.png" alt="Tiramisu">
+                        <div class="menu-item-content">
+                            <h4>Tiramisu</h4>
+                            <span class="quality">★ Premium Quality</span>
+                            <p>Italian dessert with layers of mascarpone, coffee-soaked ladyfingers, and cocoa</p>
+                            
+                            <span class="price">$5.00</span>
+                            <div>
+                                <a href="#menu" class="order-btn-menu">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item" data-category="pastries">
+                        <img src="imgs/Mille-Feuille1.jpeg" alt="Mille‑Feuille">
+                        <div class="menu-item-content">
+                            <h4>Mille‑Feuille</h4>
+                            <span class="quality">★ Premium Quality</span>
+                            <p>Elegant layers of crispy puff pastry and vanilla pastry cream, a timeless French masterpiece</p>
+                            
+                            <span class="price">$1.00</span>
+                            <div>
+                                <a href="#menu" class="order-btn-menu">Order Now <i class="fa-solid fa-cart-shopping"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Testimonials Section with Infinite Scroll -->
+        <section id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our Customers Say</h2>
+                    <p>Real reviews from real coffee lovers</p>
+                </div>
+            </div>
+            
+            <!-- Infinite Scroll Container -->
+            <div class="testimonials-scroll-container">
+                <div class="testimonials-scroll">
+                    <!-- First set of testimonials -->
+                    <div class="testimonial">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The best coffee in town! The atmosphere is perfect for work or relaxation"</p>
+                        <div class="customer">
+                            <img src="imgs/person2.jpg" alt="Customer">
+                            <div>
+                                <h4>Mike Chen</h4>
+                                <span>Regular Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Amazing quality and service. Their latte art is incredible!"</p>
+                        <div class="customer">
+                            <img src="imgs/bouk1 (1).jpeg" alt="Customer">
+                            <div>
+                                <h4>Abdelaziz Boukdous</h4>
+                                <span>Coffee Enthusiast</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Flavors that speak louder than words. This café is my daily escape!"</p>
+                        <div class="customer">
+                            <img src="imgs/bouk3.jpg" alt="Customer">
+                            <div>
+                                <h4>BoukDev</h4>
+                                <span>Local Resident</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"A cozy place with exceptional coffee. Highly recommended!"</p>
+                        <div class="customer">
+                            <img src="imgs/person4.jpg" alt="Customer">
+                            <div>
+                                <h4>Amine</h4>
+                                <span>Freelance UX Designer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="testimonial">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The best coffee in town! The atmosphere is perfect for work or relaxation"</p>
+                        <div class="customer">
+                            <img src="imgs/person2.jpg" alt="Customer">
+                            <div>
+                                <h4>Mike Chen</h4>
+                                <span>Regular Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Amazing quality and service. Their latte art is incredible!"</p>
+                        <div class="customer">
+                            <img src="imgs/bouk1 (1).jpeg" alt="Customer">
+                            <div>
+                                <h4>Abdelaziz Boukdous</h4>
+                                <span>Coffee Enthusiast</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Flavors that speak louder than words. This café is my daily escape!"</p>
+                        <div class="customer">
+                            <img src="imgs/bouk3.jpg" alt="Customer">
+                            <div>
+                                <h4>BoukDev</h4>
+                                <span>Local Resident</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"A cozy place with exceptional coffee. Highly recommended!"</p>
+                        <div class="customer">
+                            <img src="imgs/person4.jpg" alt="Customer">
+                            <div>
+                                <h4>Amine</h4>
+                                <span>Freelance UX Designer</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="testimonial">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The best coffee in town! The atmosphere is perfect for work or relaxation"</p>
+                        <div class="customer">
+                            <img src="imgs/person2.jpg" alt="Customer">
+                            <div>
+                                <h4>Mike Chen</h4>
+                                <span>Regular Customer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Amazing quality and service. Their latte art is incredible!"</p>
+                        <div class="customer">
+                            <img src="imgs/bouk1 (1).jpeg" alt="Customer">
+                            <div>
+                                <h4>Abdelaziz Boukdous</h4>
+                                <span>Coffee Enthusiast</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Flavors that speak louder than words. This café is my daily escape!"</p>
+                        <div class="customer">
+                            <img src="imgs/bouk3.jpg" alt="Customer">
+                            <div>
+                                <h4>BoukDev</h4>
+                                <span>Local Resident</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"A cozy place with exceptional coffee. Highly recommended!"</p>
+                        <div class="customer">
+                            <img src="imgs/person4.jpg" alt="Customer">
+                            <div>
+                                <h4>Amine</h4>
+                                <span>Freelance UX Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get In Touch</h2>
+                    <p>Visit us or reach out for any inquiries</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Ait Iazza, <br> Taroudant City </p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+212 6 41 33 05 93</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>Qahwaa@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Hours</h4>
+                                <p>Mon-Fri: 6AM-10PM<br>Sat-Sun: 7AM-11PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form><!--formulaire li ghadi ytsift l’data.-->
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required><!--Mlli tktab required f <input>, t3ni blli l-user ma y9drch ytsift l-form illa 3ammar dak l-khane.-->
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                            <input type="text" placeholder="Subject" required>
+                            <textarea placeholder="Your Message" rows="5" required></textarea><!-- zone dial l-message  rows:l-hauteur dyal textarea-->
+                            <button type="submit" class="btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="imgs/logoo.png" alt="Caffeine" class="footer-logo">
+                    <p>Crafting exceptional coffee experiences since 2006. Join us for the perfect cup.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Abdelaziz.Boukdous10?locale=ar_AR"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/boukdous_abdel10/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/AbdelazizBoukdous"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/abdelaziz-boukdous-6b1a7336a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i>  Ait Iazza,Taroudant City</p>
+                    <p><i class="fas fa-phone"></i>  +212 6 41 33 05 93</p>
+                    <p><i class="fas fa-envelope"></i>  abdelazizboukdous@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy;2006 Qahwaa Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

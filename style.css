@@ -1,0 +1,791 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*hado alwan lighadi n7tajo*/
+:root{
+    --bg-color: #f8f6f3;/*variable*/
+    --bg-color2: #fff7ec;
+    --bg-secondary: #fbfbfb;
+    --dark-gray: #333;
+    --light-brown: #c7a17a;
+    --dark-brown: #8b6f47;
+    --black: #1f2226;
+    --white: #ffffff;
+    --text-light: #666;
+    --border-color: #e5e5e5;
+}
+body{
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    color: var(--dark-gray);
+
+}
+h1 {/*-------------------*/
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+} /*kayt7iydo dik l3ibat dyal list da2ira sghira .*/
+a {
+    text-decoration: none;/*katna7i l-underline li kayji default f l-links*/
+
+}
+
+#header {
+    position: fixed;/*wkha scrol ib9a fix*/
+    background-color: var(--white);
+    width: 100%;
+    border-bottom: 1px solid var(--border-color);/*dak lkhet li lte7t*/
+    z-index: 1000;/*
+         Kay7dd shkon yb9a fou9 w shkon yji ta7t f layout dial page.
+        1000 hna kay3ni: “Dir liya header f level bzzaf fou9 men les autres éléments.”
+    */
+    transition: all 0.3s ease;/*ay tgahyir isar 3la header kamel color... */
+}
+#header.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);/*m3a scrol ib9a iban xadow*/
+}
+.navbar {
+    display: flex;/*– Kaydir l-elements f same ligne (horizontal direction)*/
+    justify-content: space-between;
+    align-items: center;/*– Kaycentri l-elements*/
+    max-width: 1200px;
+    margin: 0 auto;/* Katcentri navbar f middle horizontally, – Katcentri navbar f middle horizontally
+– 0 f top/bottom, auto f left/right*/
+
+
+
+    height: 85px;
+    padding: 0 20px;/*Katdir espace mn left w right*/
+}
+
+.navbar .logo {
+    width: 180px;
+    height: auto;
+}
+.nav-links {
+    display: flex;/*wlaw fnest ster*/
+    gap: 30px;
+}
+.nav-links li a {
+    display: inline-block;/*Katkhlli l-link yb9a f same line m3a l-elements l-okhrin
+                            W f nafs lwa9t y9der yakhod width, height, padding...*/
+    position: relative;/* Kaydir l-positioning relative l-parent dyalha
+                         Mofid ila bghiti tdir pseudo-elements bhal ::after aw ::before li ykounou absolut*/
+    color: var(--dark-gray);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 8px;/*dernah 7it ghan7tajoh f xadow*/
+    transition: all 0.3s ease;/*ga3 changement f style ykoun b transition dyal 0.3s*/
+}
+.nav-links li a:hover {
+    color: var(--light-brown);
+    background-color: rgba(199, 161, 122, 0.1);
+    transform: translateY(-2px);/*ktabda tle3 xwiy*/
+}
+/*underline animation*/
+.nav-links li a::after {/*Kayst3ml pseudo-element ::after bash yziid content ba3d l-link fl7ala dyalna kaytzad undeline*/
+    content: "";/* Kaydir content f ::after, hna khawi bash ykhdem underline */
+
+    position: absolute;/*Kaypositioni l-underline f relation m3a l-link ,w bash yji ta7t l-text b precision*/
+
+    left: 50%;/*kaykhali ster flwest hit ja fjend jrenah liser 
+              aw n9olo bli kaydir l-element f middle dyal parent*/
+    transform: translateX(-50%);/*kay9awd l-offset bash yji exactly center*/
+
+    bottom: -5px;/*Kaydir l-underline ta7t l-link b 5px*/
+    width: 0;/*Initial width dyal l-underline huwa 0*/
+    height: 2px;
+    background-color: var(--light-brown);
+    transition: all 0.3s ease;/*Kol changement ykoun b transition dyal 0.3s*/
+
+}
+.nav-links li a:hover::after {
+    width: 80%;
+}
+/*– Mli kayji hover 3la link, underline kaykber lwidth dyalha l 80% w Kaybano b animation zwina*/
+.nav-links li a i {
+    margin-right: 8px;/*kyba3do 3la "a" b 8px*/
+    color: var(--light-brown);
+}
+
+/*hna darori ndir haka bax ikhdem lhover ma3reftx 3lach*/
+.nav-actions {
+    display: flex;/*Kaydir lbutton horizontal */
+
+ 
+}
+
+.order-btn {
+    background: linear-gradient(135deg, var(--light-brown), var(--dark-brown));
+    color: var(--white);
+    padding: 12px 24px;/*iza7a dakhliya*/
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(199, 161, 122, 0.3);/*0.3 transparent*/
+}
+
+.order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(199, 161, 122, 0.6);
+}
+
+
+
+
+/* Home Section */
+
+#home {
+    padding-top: 85px;
+    min-height: 100vh;
+
+    justify-content: center;/* L-content yji f middle dyal screen*/
+}
+h1 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+}
+.home-content {
+    display: grid;/* it9sem mabin div text div img tex ixed liser w imag txed limen*/
+    grid-template-columns: 1fr 1fr;
+    /*– Kay9sm home-content l 2 columns
+    Kol column kayakhod 1 fraction mn l-space
+    Yani 50% / 50%  image + text*/
+    align-items: center;/*L-content yji f middle*/
+    gap: 60px;/*lmasafa binathom*/
+    max-width: 1200px;
+    /* Kat7dd l-akber largeur dyal home-content
+    Bash l content maykberch bzzaf f screens kbar*/
+
+    margin: 0 auto;
+    /*Kaycentri .home-content horizontally f page
+        0 f top/bottom, auto f left/right*/
+    padding: 60px 20px;/*Kaydir espace dakhel home-content */
+}
+h1, h2, h3, h4 {/*-------------------*/
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+}
+
+.landing-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;/*zad wla zwin aktar dik likent xeft f instagram*/
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 20px;
+    line-height: 1.3;/*masafa mbain stor dyal h1*/
+}
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+.hero-buttons {
+    display: flex;/* L-buttons yjiw f ligne wa7da horizontally*/
+    gap: 20px;/*Kaydir espace bin kol button*/
+    /*flex-wrap: wrap;*/
+}
+
+.btn-primary, .btn-secondary{
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+.btn-primary {
+    background: linear-gradient(135deg, var(--light-brown), var(--dark-brown));
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(199, 161, 122, 0.3);
+}
+
+
+.btn-secondary {
+    background: transparent;
+    color: var(--dark-gray);
+    border: 2px solid var(--light-brown);
+}
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(199, 161, 122, 0.4);
+}
+.btn-secondary:hover {
+    background: var(--light-brown);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* Stats Section */
+.stats-section {
+    background: var(--white);
+    padding: 60px 20px;
+    margin-top: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: grid;/*– Kaydir l-elements f structure dyal columns*/
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Kay9sm l-section l-columns responsive
+    Kol column kayakhod min 200px, w max 1fr (fraction mn space)
+    auto-fit kaydir columns 3la 9d l-space — kaybano adaptive
+    */
+    gap: 40px;
+    max-width: 1200px;
+    /*Kat7dd l-akber largeur dyal section
+    Bash l-content maykberch bzzaf f screens kbar
+    */
+    margin-left: auto;
+    margin-right: auto;
+/*Kaycentri .stats-section horizontally f page
+*/
+}
+.stat-item {
+    text-align: center;/*kaykhali kolxi fcenter*/
+    padding: 20px;
+}
+.stat-item i {
+    font-size: 3rem;
+    color: var(--light-brown);
+    margin-bottom: 15px;
+}
+.stat-item h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+.stat-item p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+/* Section Styles */
+section {
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-bottom: 15px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+/* --About Section-- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+#about {
+    background: var(--white);
+}
+
+.about-content {/*hadok kamlin bla section header */
+    display: grid;/*Kaydir l-elements f structure dyal rows w columns*/
+    grid-template-columns: 1fr 1fr;
+    /* Kay9sm l-container l-2 columns
+    Kol column kayakhod 1 fraction mn l-space
+     Yani 50% / 50% — perfect l-layout dyal image + text
+    */
+    gap: 60px;
+    align-items: center;
+    margin-left: 10px;
+
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+.about-text p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+.features {
+    display: flex;
+    flex-direction: column;/*L-elements yjiw f vertical stack — mn fo9 lta7t*/
+    gap: 25px;
+    margin-left: 15px;
+}
+.feature {
+    display: flex;/*Kaydir layout horizontal l-content dyal kol feature */
+    /*align-items: flex-start;/*L-elements yb9aw mns9in mn fo9 kayn icon + text*/
+    gap: 20px;/*Kaydir espace bin l-icon w l-text*/
+}
+
+.feature i {
+    font-size: 1.5rem;
+    color: var(--light-brown);
+    margin-top: 5px;
+}
+
+.feature h4{
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-bottom: 5px;
+}
+
+.feature p {
+    color: var(--text-light);
+    margin: 0;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu Section */
+
+/*aour meneu t9adat 7itach m3awba f about class:section-header*/
+.menu-categories {
+    display: flex;/* L-elements yjiw f ligne wa7da horizontally */
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+/*  Mli l-items maylss9ouch f ligne wa7da (f screens sghira), kaydir wrapping
+    Yani l-items yjiw f lines okhrin — kaybano responsive
+*/
+}
+.category-btn {/*ma3ada li fiha active all*/
+    padding: 12px 25px;
+    border: 2px solid var(--light-brown);
+    background: transparent;
+    color: var(--light-brown);
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.category-btn.active,/*derna had tari9a dmejna mabin li fiha active(category-btn active)f html bax tb9a dima hiya lawla background bdak lown, lakhrin (category-btn)gir flhover*/
+.category-btn:hover {
+    background: var(--light-brown);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+.menu-grid {
+    display: grid;/* Kaydir l-elements f structure dyal rows w columns صفوف مع أعمدة*/
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /*Kay9sm l-container l-columns responsive
+    repeat(...) kay3awd l-columns 3la 9d l-space
+    auto-fit: kay7awel y7taj kol space li kayn, w yfit l-columns
+    minmax(300px, 1fr): kol column kayakhod minimum 300px, w maximum 1fr (fraction mn l-space)
+    Yani: l-columns kaybano b size zwin f screens kbar, w kayt9llmo f screens sghira
+    */
+    gap: 30px;
+
+}
+.menu-item {
+    background: var(--white);
+    
+    border-radius: 15px ;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+}
+.menu-item:hover {
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+.menu-item img:hover{
+    transform: scale(1.10);
+}
+.menu-item-content {
+    padding: 15px 15px 15px 15px;
+}
+
+.menu-item-content h4 {
+    font-size: 1.3rem;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.menu-item-content p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+
+.quality {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #b77f54;
+  margin-right: 1rem;
+}
+.price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--light-brown);
+    display: flex;/* L-elements yjiw f ligne wa7da horizontally */
+    justify-content: center;
+}
+.order-btn-menu{
+    background: linear-gradient(135deg, var(--light-brown), var(--dark-brown));
+    color: var(--white);
+    padding: 12px 5px;/*iza7a dakhliya*/
+    margin:  10px 3px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(199, 161, 122, 0.3);
+    display: flex;/* L-elements yjiw f ligne wa7da horizontally */
+    justify-content: center;
+}
+
+.order-btn-menu i{
+ 
+    margin-left: 10px;
+    margin-top: 4px;
+
+}
+/* Testimonials Section with Infinite Scroll */
+#testimonials {
+    background: var(--white);
+    overflow: hidden;
+}
+
+.testimonials-scroll-container {
+
+    margin-top: 40px;
+}
+
+.testimonials-scroll {
+    display: flex;/*bax ikono fkhet wa7ed */
+    animation: scroll 8s linear infinite;
+    width: calc(320px * 8); /* 4 testimonials * 2 sets * 320px width */
+    /*jereb hadi wxof
+    display: grid;/* Kaydir l-elements f structure dyal rows w columns صفوف مع أعمدة
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+}
+
+.testimonials-scroll:hover {
+    animation-play-state: paused;
+
+
+
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.testimonial {
+    flex-shrink: 0;
+    width: 300px;
+    margin: 0 10px;
+    background: var(--bg-color2);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.testimonial:hover {
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.stars {
+    margin-bottom: 20px;
+}
+
+.stars i {
+    color: #ffd700;
+    font-size: 1.2rem;
+    margin: 0 2px;
+}
+
+.testimonial p {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 25px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.customer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.customer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.customer h4 {
+    color: var(--black);
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.customer span {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;/* kay9ssm l-contact-content l-jouj colonnes equal width, 1fr + 1fr = total espace.*/
+    gap: 60px;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.contact-item {
+    display: flex;
+    align-items: flex-start;/* L-items kaybdaw mn l-fawk (top aligned) */
+
+    gap: 20px;
+}
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--light-brown);
+    margin-top: 5px;
+}
+.contact-item h4 {
+    color: var(--black);
+    margin-bottom: 8px;
+}
+.contact-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+.contact-form {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.contact-form input,/* hna l-style kaytapply mlli user yklik 3la input ola textarea.*/
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;/* kaynhi l-outline l-default dyal browser (usually blue).*/
+    border-color: var(--light-brown);
+    box-shadow: 0 0 0 3px rgba(199, 161, 122, 0.1);
+}
+
+
+/*– Useful f forms li kaykhdmu b messages tlwal
+– Katkhlli l-form responsive: l-user y3ammar msg akthar w textarea tkbar ma3ah*/
+.contact-form textarea {
+    resize: vertical;/*- mli ikteb katkhlli user y9dr ykbr textarea f l-hauteur ghir (ma y9drch ykbr f l-width).*/
+    min-height: 120px;/*textarea kaybda b hauteur l-a9all = 120px — zid 400 bax tafhem*/
+}
+/* Footer */
+footer {
+    background-image: url(imgs/foter0.png);
+    color: var(--white);
+    padding: 60px 0 20px;
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.footer-section h4 {
+    color: var(--light-brown);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+.footer-logo {
+    width: 80px;
+    margin-bottom: 0px;
+}
+.footer-section p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+.social-links a {
+    width: 40px;
+    height: 40px;
+    color: rgba(0, 0, 0, 0.738);
+    background: var(--light-brown);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.social-links a:hover {
+    background: var(--dark-brown);
+    color: black;
+    transform: translateY(-3px);
+}
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+.footer-section ul li a {
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+.footer-section ul li a:hover {
+    color: var(--light-brown);
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #999;
+}
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 15px;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .home-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .form-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    .social-links {
+        justify-content: center;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .stats-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-categories {
+        gap: 10px;
+    }
+    
+    .category-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
