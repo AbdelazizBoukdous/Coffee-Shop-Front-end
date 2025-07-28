@@ -22,5 +22,5 @@
 - **CSS3**
 - **JavaScript**
 
-<img width="2000" height="2500" alt="Qahwaa" src="https://github.com/user-attachments/assets/ba75005c-052f-404f-9980-c0a665a6a9f2" />
+<img width="500" height="500" alt="Qahwaa" src="https://github.com/user-attachments/assets/ba75005c-052f-404f-9980-c0a665a6a9f2" />
 
