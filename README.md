@@ -2,6 +2,7 @@
 
 **Qahwaa** is a stylish and responsive coffee shop website that showcases a modern café experience. It includes a welcoming homepage, a filterable menu of drinks and desserts, customer testimonials, and a contact form — all wrapped in a clean and elegant design.
 
+<img width="400" height="800" alt="Qahwaa" src="https://github.com/user-attachments/assets/ba75005c-052f-404f-9980-c0a665a6a9f2" />
 ---
 
 ## 🌟 Features
@@ -22,5 +23,5 @@
 - **CSS3**
 - **JavaScript**
 
-<img width="300" height="700" alt="Qahwaa" src="https://github.com/user-attachments/assets/ba75005c-052f-404f-9980-c0a665a6a9f2" />
+
 
